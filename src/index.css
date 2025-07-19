@@ -1,0 +1,225 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 14% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 14% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 14% 15%;
+
+    --primary: 43 74% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 210 14% 15%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 210 14% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 43 74% 52%;
+
+    --radius: 0.5rem;
+
+    /* Emdad specific colors - Using exact hex values converted to HSL */
+    --emdad-navy: 215 31% 16%; /* #1A1F2B */
+    --emdad-gold: 43 74% 52%; /* #D4AF37 */
+    --emdad-white: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 215 31% 16%;
+    --foreground: 0 0% 100%;
+
+    --card: 215 31% 16%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 215 31% 16%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 43 74% 52%;
+    --primary-foreground: 215 31% 16%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 43 74% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .emdad-navy {
+    background-color: hsl(var(--emdad-navy));
+  }
+
+  .emdad-gold {
+    color: hsl(var(--emdad-gold));
+  }
+
+  .emdad-gold-bg {
+    background-color: hsl(var(--emdad-gold));
+  }
+
+  .text-emdad-navy {
+    color: hsl(var(--emdad-navy));
+  }
+
+  .text-emdad-gold {
+    color: hsl(var(--emdad-gold));
+  }
+
+  .bg-emdad-navy {
+    background-color: hsl(var(--emdad-navy));
+  }
+
+  .bg-emdad-gold {
+    background-color: hsl(var(--emdad-gold));
+  }
+
+  .border-emdad-gold {
+    border-color: hsl(var(--emdad-gold));
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.6s ease-out;
+}
+
+/* Enhanced RTL Support */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="rtl"] .flex:not(.flex-col) {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+[dir="rtl"] .space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+[dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+/* RTL positioning for absolute elements */
+[dir="rtl"] .left-4 {
+  left: auto;
+  right: 1rem;
+}
+
+[dir="rtl"] .right-4 {
+  right: auto;
+  left: 1rem;
+}
+
+[dir="rtl"] .left-1\/2 {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+/* RTL transforms */
+[dir="rtl"] .-translate-x-1\/2 {
+  --tw-translate-x: 50%;
+}
+
+/* Smooth transitions for language switching */
+* {
+  transition: margin 0.3s ease, padding 0.3s ease;
+}
