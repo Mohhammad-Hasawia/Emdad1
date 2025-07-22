@@ -12,7 +12,7 @@ export function QualityHero() {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#1A1F2B] opacity-80"></div>
+      <div className="absolute inset-0 bg-[#1F3B73] opacity-80"></div> {/* Changed color from #1A1F2B to #1F3B73 (Royal Blue) */}
 
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">

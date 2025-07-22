@@ -40,24 +40,24 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
-    /* Emdad specific colors - Using exact hex values converted to HSL */
-    --emdad-navy: 215 31% 16%; /* #1A1F2B */
+    /* Emdad specific colors - Changed color from #1A1F2B to #1F3B73 (Royal Blue) */
+    --emdad-navy: 215 45% 29%; /* #1F3B73 */
     --emdad-gold: 43 74% 52%; /* #D4AF37 */
     --emdad-white: 0 0% 100%;
   }
 
   .dark {
-    --background: 215 31% 16%;
+    --background: 215 45% 29%; /* Changed color from #1A1F2B to #1F3B73 (Royal Blue) */
     --foreground: 0 0% 100%;
 
-    --card: 215 31% 16%;
+    --card: 215 45% 29%; /* Changed color from #1A1F2B to #1F3B73 (Royal Blue) */
     --card-foreground: 0 0% 100%;
 
-    --popover: 215 31% 16%;
+    --popover: 215 45% 29%; /* Changed color from #1A1F2B to #1F3B73 (Royal Blue) */
     --popover-foreground: 0 0% 100%;
 
     --primary: 43 74% 52%;
-    --primary-foreground: 215 31% 16%;
+    --primary-foreground: 215 45% 29%; /* Changed color from #1A1F2B to #1F3B73 (Royal Blue) */
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 0 0% 100%;

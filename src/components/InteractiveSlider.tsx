@@ -79,7 +79,7 @@ export function InteractiveSlider() {
                 backgroundImage: `url('${sliderData[activeIndex].image}')`
               }}
             >
-              <div className="absolute inset-0 bg-[#1A1F2B] bg-opacity-70 flex items-center justify-center">
+              <div className="absolute inset-0 bg-[#1F3B73] bg-opacity-70 flex items-center justify-center"> {/* Changed color from #1A1F2B to #1F3B73 (Royal Blue) */}
                 <div className="text-center max-w-3xl px-6">
                   <h2 className="text-4xl md:text-5xl font-bold text-emdad-gold mb-6">
                     {t(`slider.${sliderData[activeIndex].key}`)}
