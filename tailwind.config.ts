@@ -19,6 +19,8 @@ export default {
 		},
 		extend: {
 			colors: {
+				'emdad-navy': '#1F3B73', /* Royal Blue */
+				'emdad-gold': '#B89020', /* Updated gold color from #D4AF37 to #B89020 for a richer golden appearance */
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

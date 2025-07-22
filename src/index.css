@@ -42,7 +42,7 @@ All colors MUST be HSL.
 
     /* Emdad specific colors - Changed color from #1A1F2B to #1F3B73 (Royal Blue) */
     --emdad-navy: 215 45% 29%; /* #1F3B73 */
-    --emdad-gold: 43 74% 52%; /* #D4AF37 */
+    --emdad-gold: 43 74% 42%; /* #B89020 - Updated gold color from #D4AF37 to #B89020 for a richer golden appearance */
     --emdad-white: 0 0% 100%;
   }
 
@@ -56,7 +56,7 @@ All colors MUST be HSL.
     --popover: 215 45% 29%; /* Changed color from #1A1F2B to #1F3B73 (Royal Blue) */
     --popover-foreground: 0 0% 100%;
 
-    --primary: 43 74% 52%;
+    --primary: 43 74% 42%; /* Updated gold color from #D4AF37 to #B89020 for a richer golden appearance */
     --primary-foreground: 215 45% 29%; /* Changed color from #1A1F2B to #1F3B73 (Royal Blue) */
 
     --secondary: 217.2 32.6% 17.5%;
@@ -73,7 +73,7 @@ All colors MUST be HSL.
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 43 74% 52%;
+    --ring: 43 74% 42%; /* Updated gold color from #D4AF37 to #B89020 for a richer golden appearance */
   }
 }
 
