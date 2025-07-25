@@ -45,6 +45,18 @@ export function Header() {
         navigate('/quality');
         setTimeout(() => window.scrollTo(0, 0), 100);
         break;
+      case 'services':
+        navigate('/services');
+        setTimeout(() => window.scrollTo(0, 0), 100);
+        break;
+      case 'activities':
+        navigate('/activities');
+        setTimeout(() => window.scrollTo(0, 0), 100);
+        break;
+      case 'safety':
+        navigate('/safety');
+        setTimeout(() => window.scrollTo(0, 0), 100);
+        break;
       case 'contact':
         navigate('/contact');
         setTimeout(() => window.scrollTo(0, 0), 100);
@@ -73,6 +85,9 @@ export function Header() {
 
   const navItems = [
     { key: 'nav.about', href: 'about' },
+    { key: 'nav.services', href: 'services' },
+    { key: 'nav.activities', href: 'activities' },
+    { key: 'nav.safety', href: 'safety' },
     { key: 'nav.quality', href: 'quality' },
     { key: 'nav.contact', href: 'contact' },
     { key: 'nav.faq', href: 'faq' },

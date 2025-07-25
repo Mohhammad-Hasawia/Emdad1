@@ -11,6 +11,9 @@ import NotFound from "./pages/NotFound";
 import Quality from "./pages/Quality";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
+import Services from "./pages/Services";
+import Activities from "./pages/Activities";
+import Safety from "./pages/Safety";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +27,9 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/activities" element={<Activities />} />
+            <Route path="/safety" element={<Safety />} />
             <Route path="/quality" element={<Quality />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />

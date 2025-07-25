@@ -12,6 +12,9 @@ const translations = {
   en: {
     // Navigation
     'nav.about': 'About',
+    'nav.services': 'Services',
+    'nav.activities': 'Activities',
+    'nav.safety': 'Safety',
     'nav.quality': 'Quality',
     'nav.contact': 'Contact Us',
     'nav.faq': 'FAQ',
@@ -109,6 +112,9 @@ const translations = {
     // Footer
     'footer.home': 'Home',
     'footer.about': 'About',
+    'footer.services': 'Services',
+    'footer.activities': 'Activities',
+    'footer.safety': 'Safety',
     'footer.quality': 'Quality',
     'footer.contact': 'Contact Us',
     'footer.faq': 'FAQ',
@@ -226,6 +232,9 @@ const translations = {
   ar: {
     // Navigation
     'nav.about': 'حول الشركة',
+    'nav.services': 'الخدمات',
+    'nav.activities': 'الأنشطة',
+    'nav.safety': 'السلامة',
     'nav.quality': 'الجودة',
     'nav.contact': 'اتصل بنا',
     'nav.faq': 'الأسئلة الشائعة',
@@ -323,6 +332,9 @@ const translations = {
     // Footer
     'footer.home': 'الرئيسية',
     'footer.about': 'حول الشركة',
+    'footer.services': 'الخدمات',
+    'footer.activities': 'الأنشطة',
+    'footer.safety': 'السلامة',
     'footer.quality': 'الجودة',
     'footer.contact': 'اتصل بنا',
     'footer.faq': 'الأسئلة الشائعة',

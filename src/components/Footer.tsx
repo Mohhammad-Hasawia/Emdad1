@@ -8,6 +8,9 @@ export function Footer() {
   const footerLinks = [
     { key: 'footer.home', href: '/' },
     { key: 'footer.about', href: '/about' },
+    { key: 'footer.services', href: '/services' },
+    { key: 'footer.activities', href: '/activities' },
+    { key: 'footer.safety', href: '/safety' },
     { key: 'footer.quality', href: '/quality' },
     { key: 'footer.contact', href: '/contact' },
     { key: 'footer.faq', href: '/faq' },
