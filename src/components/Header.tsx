@@ -89,6 +89,7 @@ export function Header() {
     { key: 'nav.activities', href: 'activities' },
     { key: 'nav.safety', href: 'safety' },
     { key: 'nav.quality', href: 'quality' },
+    { key: 'nav.sustainability', href: 'sustainability' },
     { key: 'nav.contact', href: 'contact' },
     { key: 'nav.faq', href: 'faq' },
   ];

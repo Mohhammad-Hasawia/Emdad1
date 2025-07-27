@@ -12,6 +12,7 @@ export function Footer() {
     { key: 'footer.activities', href: '/activities' },
     { key: 'footer.safety', href: '/safety' },
     { key: 'footer.quality', href: '/quality' },
+    { key: 'footer.sustainability', href: '/sustainability' },
     { key: 'footer.contact', href: '/contact' },
     { key: 'footer.faq', href: '/faq' },
   ];

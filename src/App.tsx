@@ -14,6 +14,7 @@ import FAQ from "./pages/FAQ";
 import Services from "./pages/Services";
 import Activities from "./pages/Activities";
 import Safety from "./pages/Safety";
+import Sustainability from "./pages/Sustainability";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/activities" element={<Activities />} />
             <Route path="/safety" element={<Safety />} />
             <Route path="/quality" element={<Quality />} />
+            <Route path="/sustainability" element={<Sustainability />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
