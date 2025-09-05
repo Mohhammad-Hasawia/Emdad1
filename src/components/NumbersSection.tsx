@@ -27,7 +27,7 @@ export function NumbersSection() {
                 </div>
                 <div className="text-center p-4 bg-white rounded-lg shadow-md">
                   <div className="text-3xl font-bold text-emdad-gold mb-2">
-                    <div className="text-center p-3 md:p-4 bg-white rounded-lg shadow-md">
+                    218,000
                   </div>
                   <div className="text-gray-600">m³ Transported</div>
                 </div>
@@ -48,7 +48,4 @@ export function NumbersSection() {
       </div>
     </section>
   );
-}
-
-  )
 }
