@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root colors and design system */
+@layer base {
+  :root {
+    --emdad-navy: 215 45% 29%;
+    --emdad-gold: 43 74% 42%;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Arabic font styling */
+  [dir="rtl"] {
+    font-family: 'Cairo', 'Tajawal', 'Amiri', sans-serif;
+  }
+
+  /* Arabic text improvements */
+  [dir="rtl"] .arabic-text {
+    font-family: 'Cairo', 'Tajawal', 'Amiri', sans-serif;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+  }
+
+  /* Center shorter lines relative to longer ones */
+  .arabic-balanced-text {
+    text-align: center;
+  }
+
+  [dir="rtl"] .arabic-balanced-text {
+    text-align: center;
+  }
+
+  /* Improved spacing for Arabic text */
+  [dir="rtl"] p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+
+  [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6 {
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+
+  .emdad-navy { background-color: hsl(var(--emdad-navy)); }
+  .emdad-gold { color: hsl(var(--emdad-gold)); }
+  .bg-emdad-navy { background-color: hsl(var(--emdad-navy)); }
+  .bg-emdad-gold { background-color: hsl(var(--emdad-gold)); }
+  .text-emdad-gold { color: hsl(var(--emdad-gold)); }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+.animate-fade-in-up { animation: fadeInUp 0.6s ease-out; }
+.animate-slide-in { animation: slideIn 0.6s ease-out; }
+.animate-slideDown { animation: slideDown 0.3s ease-out forwards; }
+
+/* RTL Support */
+[dir="rtl"] { direction: rtl; }
+
+/* RTL Layout adjustments */
+[dir="rtl"] .rtl-flex-reverse { flex-direction: row-reverse; }
+[dir="rtl"] .rtl-text-right { text-align: right; }
+[dir="rtl"] .rtl-text-left { text-align: left; }
+[dir="rtl"] .rtl-text-center { text-align: center; }
+
+/* Mobile Navigation Improvements */
+@media (max-width: 1024px) {
+  .mobile-nav-dropdown {
+    background-color: rgba(31, 59, 115, 0.98);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(184, 144, 32, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Timeline specific RTL support */
+[dir="rtl"] .timeline-item-left {
+  text-align: left;
+  padding-left: 2rem;
+  padding-right: 0;
+}
+
+[dir="rtl"] .timeline-item-right {
+  text-align: right;
+  padding-right: 2rem;
+  padding-left: 0;
+}
+
+[dir="ltr"] .timeline-item-left {
+  text-align: right;
+  padding-right: 2rem;
+  padding-left: 0;
+}
+
+[dir="ltr"] .timeline-item-right {
+  text-align: left;
+  padding-left: 2rem;
+  padding-right: 0;
+}
+
+/* Responsive timeline adjustments */
+@media (max-width: 768px) {
+  /* Mobile timeline - single column layout */
+  .timeline-item-left,
+  .timeline-item-right {
+    text-align: left !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Mobile timeline container */
+  .mobile-timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+  
+  .mobile-timeline::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #B89020, #D4AF37);
+  }
+}
