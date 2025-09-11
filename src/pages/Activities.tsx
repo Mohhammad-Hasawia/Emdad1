@@ -12,6 +12,7 @@ import {
   TrendingUp,
   CheckCircle
 } from 'lucide-react';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 export default function Activities() {
   const { language } = useLanguage();
@@ -59,6 +60,12 @@ At Emdad Mubasher, we understand that transporting petroleum products is a criti
         style={{ backgroundImage: `url('/img/activities.jpeg')` }}
       >
         <div className="absolute inset-0 bg-emdad-navy opacity-80"></div>
+        
+        {/* Breadcrumb */}
+        <div className="absolute top-20 left-0 right-0 z-20">
+          <Breadcrumb className="py-4" />
+        </div>
+        
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <Activity className="w-16 h-16 text-emdad-gold mx-auto mb-6" />
          <h1 className="heading-page font-bold 

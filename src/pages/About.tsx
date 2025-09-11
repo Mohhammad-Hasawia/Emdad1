@@ -14,6 +14,7 @@ import {
   Users,
   CheckCircle
 } from 'lucide-react';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 export default function About() {
   const { t } = useLanguage();
@@ -91,6 +92,11 @@ export default function About() {
       >
         {/* Hero Overlay */}
         <div className="absolute inset-0 bg-emdad-navy opacity-80"></div>
+        
+        {/* Breadcrumb */}
+        <div className="absolute top-20 left-0 right-0 z-20">
+          <Breadcrumb className="py-4" />
+        </div>
         
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <h1 className="heading-hero font-extrabold mb-4 md:mb-6 bg-gradient-to-r from-emdad-gold via-yellow-400 to-emdad-gold bg-clip-text text-transparent  arabic-text leading-tight">

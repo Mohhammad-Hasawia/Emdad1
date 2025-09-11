@@ -2,7 +2,7 @@ import { useLocation, Link } from 'react-router-dom';
 import { useLanguage } from '@/hooks/useLanguage';
 import { ChevronRight, Home } from 'lucide-react';
 
-export function Breadcrumb() {
+export function Breadcrumb({ className = "" }: { className?: string }) {
   const location = useLocation();
   const { t, language } = useLanguage();
 
@@ -32,12 +32,12 @@ export function Breadcrumb() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-gray-50 to-gray-100 border-b border-gray-200/50 mt-16 lg:mt-20">
-      <div className="container mx-auto px-4 py-4">
+    <div className={`${className}`}>
+      <div className="container mx-auto px-4">
         <nav className="flex items-center space-x-2 rtl:space-x-reverse text-sm">
           <Link
             to="/"
-            className="flex items-center gap-1 text-gray-600 hover:text-emdad-gold transition-colors duration-200 font-medium"
+            className="flex items-center gap-1 text-white/80 hover:text-emdad-gold transition-colors duration-200 font-medium"
           >
             <Home className="w-4 h-4" />
             <span>{t('nav.home')}</span>
@@ -50,16 +50,16 @@ export function Breadcrumb() {
             return (
               <div key={pathname} className="flex items-center space-x-2 rtl:space-x-reverse">
                 <ChevronRight 
-                  className={`w-4 h-4 text-gray-400 ${language === 'ar' ? 'rotate-180' : ''}`} 
+                  className={`w-4 h-4 text-white/60 ${language === 'ar' ? 'rotate-180' : ''}`} 
                 />
                 {isLast ? (
-                  <span className="text-emdad-gold font-semibold bg-emdad-gold/10 px-3 py-1 rounded-full">
+                  <span className="text-emdad-gold font-semibold bg-emdad-gold/20 px-3 py-1 rounded-full backdrop-blur-sm">
                     {getBreadcrumbName(pathname)}
                   </span>
                 ) : (
                   <Link
                     to={routeTo}
-                    className="text-gray-600 hover:text-emdad-gold transition-colors duration-200 font-medium hover:underline"
+                    className="text-white/80 hover:text-emdad-gold transition-colors duration-200 font-medium hover:underline"
                   >
                     {getBreadcrumbName(pathname)}
                   </Link>

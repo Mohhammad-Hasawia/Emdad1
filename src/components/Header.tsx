@@ -110,11 +110,9 @@ export function Header() {
       {/* Sticky Header */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          location.pathname === "/" 
-            ? isScrolled
-              ? "bg-emdad-navy/95 backdrop-blur-lg shadow-xl border-b border-emdad-gold/20"
-              : "bg-transparent"
-            : "bg-emdad-navy/95 backdrop-blur-lg shadow-xl border-b border-emdad-gold/20"
+          isScrolled
+            ? "bg-emdad-navy/95 backdrop-blur-lg shadow-xl border-b border-emdad-gold/20"
+            : "bg-transparent"
         } ${showHeader ? "translate-y-0" : "-translate-y-full"}`}
       >
         <div className="container mx-auto px-4 py-3">
@@ -304,8 +302,6 @@ export function Header() {
         </div>
       </header>
 
-      {/* Breadcrumb Component */}
-      <Breadcrumb />
     </>
   );
 }

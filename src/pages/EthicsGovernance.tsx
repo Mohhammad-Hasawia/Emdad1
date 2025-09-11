@@ -10,6 +10,7 @@ import {
   Handshake,
   CheckCircle
 } from 'lucide-react';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 export default function EthicsGovernance() {
   const { language } = useLanguage();
@@ -75,6 +76,11 @@ export default function EthicsGovernance() {
 >
   {/* Dark Overlay */}
   <div className="absolute inset-0 bg-emdad-navy opacity-80"></div>
+
+  {/* Breadcrumb */}
+  <div className="absolute top-20 left-0 right-0 z-20">
+    <Breadcrumb className="py-4" />
+  </div>
 
   {/* Hero Content */}
   <div className="relative z-10 text-center max-w-4xl mx-auto px-4">

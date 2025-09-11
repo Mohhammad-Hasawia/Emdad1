@@ -9,12 +9,19 @@ import { QualityPolicy } from '@/components/quality/QualityPolicy';
 import { QualityCertifications } from '@/components/quality/QualityCertifications';
 import { QualitySafety } from '@/components/quality/QualitySafety';
 import { QualityNumbers } from '@/components/quality/QualityNumbers';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 const Quality = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <QualityHero />
+      <div className="relative">
+        <QualityHero />
+        {/* Breadcrumb overlay on hero */}
+        <div className="absolute top-20 left-0 right-0 z-20">
+          <Breadcrumb className="py-4" />
+        </div>
+      </div>
       <QualityEfficiency />
       <QualityStandards />
       <QualityProfessionalism />

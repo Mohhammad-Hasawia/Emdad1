@@ -13,6 +13,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 export default function Services() {
   const { t, language } = useLanguage();
@@ -67,6 +68,11 @@ export default function Services() {
 >
   {/* Dark Overlay */}
   <div className="absolute inset-0 bg-emdad-navy opacity-80"></div>
+
+  {/* Breadcrumb */}
+  <div className="absolute top-20 left-0 right-0 z-20">
+    <Breadcrumb className="py-4" />
+  </div>
 
   {/* Hero Content */}
   <div className="relative z-10 text-center max-w-4xl mx-auto px-4">

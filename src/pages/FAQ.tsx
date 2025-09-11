@@ -9,6 +9,7 @@ import {
   HelpCircle
 } from 'lucide-react';
 import { useState } from 'react';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 export default function FAQ() {
   const { t } = useLanguage();
@@ -55,6 +56,11 @@ export default function FAQ() {
       
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center bg-emdad-navy">
+        {/* Breadcrumb */}
+        <div className="absolute top-20 left-0 right-0 z-20">
+          <Breadcrumb className="py-4" />
+        </div>
+        
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <HelpCircle className="w-16 h-16 text-emdad-gold mx-auto mb-6" />
          <h1 className="heading-page font-bold 
